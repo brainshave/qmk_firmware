@@ -56,55 +56,37 @@ enum macro_keycodes {
 #define KC_CTLTB CTL_T(KC_TAB)
 #define KC_GUIEI GUI_T(KC_LANG2)
 #define KC_ALTKN ALT_T(KC_LANG1)
+#define KC_ESC_ALT MT(MOD_LALT, KC_ESC)
+#define KC_ALT_PRINT MT(MOD_RALT, KC_PSCREEN)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT_kc( \
-  //,-----------------------------------------.                ,-----------------------------------------.
-        ESC,     Q,     W,     E,     R,     T,                      Y,     U,     I,     O,     P,  BSPC,\
-  //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      CTLTB,     A,     S,     D,     F,     G,                      H,     J,     K,     L,  SCLN,  QUOT,\
-  //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-       LSFT,     Z,     X,     C,     V,     B,                      N,     M,  COMM,   DOT,  SLSH,  RSFT,\
-  //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  GUIEI, LOWER,   SPC,      ENT, RAISE, ALTKN \
-                              //`--------------------'  `--------------------'
-  ),
+TAB,   Q,     W,       E,     R,     T,     Y,     U,     I,     O,     P,     BSPC,  \
+LCTRL, A,     S,       D,     F,     G,     H,     J,     K,     L,     SCLN,  ENTER, \
+LSFT,  Z,     X,       C,     V,     B,     N,     M,     COMM,  DOT,   SLSH,  RSFT,  \
+LGUI,  LOWER, ESC_ALT, SPC,   RAISE, ALT_PRINT\
+),
 
-  [_LOWER] = LAYOUT_kc( \
-  //,-----------------------------------------.                ,-----------------------------------------.
-        ESC,     1,     2,     3,     4,     5,                      6,     7,     8,     9,     0,  BSPC,\
-  //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      CTLTB,    F1,    F2,    F3,    F4,    F5,                     F6,    F7,    F8,    F9,   F10, XXXXX,\
-  //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-       LSFT,   F11,   F12,   F13,   F14,   F15,                    F16,   F17,   F18,   F19,   F20, XXXXX,\
-  //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  GUIEI, LOWER,   SPC,      ENT, RAISE, ALTKN \
-                              //`--------------------'  `--------------------'
-  ),
+ [_LOWER] LAYOUT_kc( \
+TAB,   F1,    F2,      F3,    F4,    F5,    HOME,  PGDN,  PGUP,  END,   INS,   DEL,   \
+CTLTB, F6,    F7,      F8,    F9,    F10,   LEFT,  DOWN,  UP,    RIGHT, XXXXX, XXXXX, \
+LSFT,  F11,   F12,     F13,   F14,   F15,   MPRV,  VOLD,  VOLU,  MNXT,  MUTE,  MPLY,  \
+LGUI,  LOWER, ESC_ALT, SPC,   RAISE, ALT_PRINT\
+),
 
-  [_RAISE] = LAYOUT_kc( \
-  //,-----------------------------------------.                ,-----------------------------------------.
-        ESC,  EXLM,    AT,  HASH,   DLR,  PERC,                   CIRC,  AMPR,  ASTR,  LPRN,  RPRN,  BSPC,\
-  //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      CTLTB, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                   MINS,   EQL,  LCBR,  RCBR,  PIPE,   GRV,\
-  //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-       LSFT, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                   UNDS,  PLUS,  LBRC,  RBRC,  BSLS,  TILD,\
-  //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  GUIEI, LOWER,   SPC,      ENT, RAISE, ALTKN \
-                              //`--------------------'  `--------------------'
-  ),
+ [_RAISE] LAYOUT_kc( \
+XXXXX, CIRC,  GRAVE,   TILDE, AMPR,  PIPE,  PLUS,  7,     8,     9,     DQUO,  PIPE,  \
+LCTRL, EXLM,  AT,      HASH,  DLR,   PERC,  MINUS, 4,     5,     6,     QUOT,  BSLS,  \
+LCBR,  LPRN,  RPRN,    LBRC,  RBRC,  RCBR,  0,     1,     2,     3,     EQL,   UNDS,  \
+LGUI,  LOWER, ESC_ALT, SPC,   RAISE, ALT_PRINT\
+),
 
-  [_ADJUST] = LAYOUT_kc( \
-  //,-----------------------------------------.                ,-----------------------------------------.
-        RST,  LRST, XXXXX, XXXXX, XXXXX, XXXXX,                  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
-  //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-       LTOG,  LHUI,  LSAI,  LVAI, XXXXX, XXXXX,                  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
-  //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-       LMOD,  LHUD,  LSAD,  LVAD, XXXXX, XXXXX,                  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
-  //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  GUIEI, LOWER,   SPC,      ENT, RAISE, ALTKN \
-                              //`--------------------'  `--------------------'
-  )
+ [_ADJUST] LAYOUT_kc( \
+RST,   LRST,  XXXXX,   XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, \
+LTOG,  LHUI,  LSAI,    LVAI,  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, \
+LMOD,  LHUD,  LSAD,    LVAD,  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, \
+LGUI,  LOWER, ESC_ALT, SPC,   RAISE, ALT_PRINT\
+ )
 };
 
 int RGB_current_mode;
