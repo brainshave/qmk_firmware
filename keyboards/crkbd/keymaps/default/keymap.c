@@ -75,7 +75,7 @@ LGUI,  LOWER, ESC_ALT, SPC,   RAISE, ALT_PRINT\
 ),
 
  [_RAISE] LAYOUT_kc( \
-XXXXX, CIRC,  GRAVE,   TILDE, AMPR,  PIPE,  PLUS,  7,     8,     9,     DQUO,  PIPE,  \
+CIRC,  GRAVE, TILDE,   ASTR, AMPR,  PIPE,  PLUS,  7,     8,     9,     DQUO,  PIPE,  \
 LCTRL, EXLM,  AT,      HASH,  DLR,   PERC,  MINUS, 4,     5,     6,     QUOT,  BSLS,  \
 LCBR,  LPRN,  RPRN,    LBRC,  RBRC,  RCBR,  0,     1,     2,     3,     EQL,   UNDS,  \
 LGUI,  LOWER, ESC_ALT, SPC,   RAISE, ALT_PRINT\
