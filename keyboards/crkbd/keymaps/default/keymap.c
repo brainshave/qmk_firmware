@@ -75,10 +75,10 @@ LGUI,  LOWER, ESC_ALT, SPC,   RAISE, ALT_PRINT\
 ),
 
  [_RAISE] LAYOUT_kc( \
-XXXXX, CIRC,  GRAVE, TILDE,   ASTR, AMPR,  PLUS,  7,     8,     9,     DQUO,  PIPE,  \
-LCTRL, EXLM,  AT,      HASH,  DLR,   PERC,  MINUS, 4,     5,     6,     QUOT,  BSLS,  \
-LCBR,  LPRN,  RPRN,    LBRC,  RBRC,  RCBR,  0,     1,     2,     3,     EQL,   UNDS,  \
-LGUI,  LOWER, ESC_ALT, SPC,   RAISE, ALT_PRINT\
+XXXXX, CIRC,  TILDE,   LBRC, RBRC,  AMPR, PLUS,  7, 8, 9, DQUO,  PIPE, \
+LCTRL, EXLM,  AT,      LPRN, RPRN,  PERC, MINUS, 4, 5, 6, QUOT,  BSLS, \
+LSFT,  HASH,  DLR,     LCBR, RCBR,  ASTR, EQL,   1, 2, 3, GRAVE, UNDS, \
+LGUI,  LOWER, ESC_ALT, SPC,  RAISE, 0\
 ),
 
  [_ADJUST] LAYOUT_kc( \
