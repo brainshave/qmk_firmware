@@ -70,7 +70,7 @@ LGUI,  LOWER, ESC_ALT, SPC,   RAISE, ALT_PRINT\
  [_LOWER] LAYOUT_kc( \
 TAB,   F1,    F2,      F3,    F4,    F5,    HOME,  PGDN,  PGUP,  END,   INS,   DEL,   \
 CTLTB, F6,    F7,      F8,    F9,    F10,   LEFT,  DOWN,  UP,    RIGHT, XXXXX, XXXXX, \
-LSFT,  F11,   F12,     F13,   F14,   F15,   MPRV,  VOLD,  VOLU,  MNXT,  MUTE,  MPLY,  \
+LSFT,  F11,   F12,     F13,   F14,   F15,   MRWD,  _VOLDOWN,  _VOLUP,  MFFD,  _MUTE,  MPLY,  \
 LGUI,  LOWER, ESC_ALT, SPC,   RAISE, ALT_PRINT\
 ),
 
