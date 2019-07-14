@@ -57,35 +57,36 @@ enum macro_keycodes {
 #define KC_GUIEI GUI_T(KC_LANG2)
 #define KC_ALTKN ALT_T(KC_LANG1)
 #define KC_ESC_ALT MT(MOD_LALT, KC_ESC)
-#define KC_ALT_PRINT MT(MOD_RALT, KC_PSCREEN)
+#define KC_ALT_PRINT MT(MOD_LALT, KC_PSCREEN)
+#define KC_BALT MT(MOD_LALT, KC_BSPC)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT_kc( \
-TAB,   Q,     W,       E,     R,     T,     Y,     U,     I,     O,     P,     BSPC,  \
-LCTRL, A,     S,       D,     F,     G,     H,     J,     K,     L,     SCLN,  ENTER, \
+ESC,   Q,     W,       E,     R,     T,     Y,     U,     I,     O,     P,     DEL,   \
+CTLTB, A,     S,       D,     F,     G,     H,     J,     K,     L,     SCLN,  ENTER, \
 LSFT,  Z,     X,       C,     V,     B,     N,     M,     COMM,  DOT,   SLSH,  RSFT,  \
-LGUI,  LOWER, ESC_ALT, SPC,   RAISE, ALT_PRINT\
+LGUI,  LOWER, BSPC,    SPC,   RAISE, ALT_PRINT\
 ),
 
  [_LOWER] LAYOUT_kc( \
-TAB,   F1,    F2,      F3,    F4,    F5,    HOME,  PGDN,  PGUP,  END,   INS,   DEL,   \
+ESC,   F1,    F2,      F3,    F4,    F5,    HOME,  PGDN,  PGUP,  END,   INS,   DEL,   \
 CTLTB, F6,    F7,      F8,    F9,    F10,   LEFT,  DOWN,  UP,    RIGHT, XXXXX, XXXXX, \
 LSFT,  F11,   F12,     F13,   F14,   F15,   MRWD,  _VOLDOWN,  _VOLUP,  MFFD,  _MUTE,  MPLY,  \
-LGUI,  LOWER, ESC_ALT, SPC,   RAISE, ALT_PRINT\
+LGUI,  LOWER, BSPC,    SPC,   RAISE, ALT_PRINT\
 ),
 
  [_RAISE] LAYOUT_kc( \
 XXXXX, CIRC,  TILDE,   LBRC, RBRC,  AMPR, PLUS,  7, 8, 9, DQUO,  PIPE, \
-LCTRL, EXLM,  AT,      LPRN, RPRN,  PERC, MINUS, 4, 5, 6, QUOT,  BSLS, \
+CTLTB, EXLM,  AT,      LPRN, RPRN,  PERC, MINUS, 4, 5, 6, QUOT,  BSLS, \
 LSFT,  HASH,  DLR,     LCBR, RCBR,  ASTR, EQL,   1, 2, 3, GRAVE, UNDS, \
-LGUI,  LOWER, ESC_ALT, SPC,  RAISE, 0\
+LGUI,  LOWER, BSPC,    SPC,  RAISE, 0\
 ),
 
  [_ADJUST] LAYOUT_kc( \
 RST,   LRST,  XXXXX,   XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, \
 LTOG,  LHUI,  LSAI,    LVAI,  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, \
 LMOD,  LHUD,  LSAD,    LVAD,  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, \
-LGUI,  LOWER, ESC_ALT, SPC,   RAISE, ALT_PRINT\
+LGUI,  LOWER, BSPC,    SPC,   RAISE, ALT_PRINT\
  )
 };
 
