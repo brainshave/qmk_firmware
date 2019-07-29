@@ -54,6 +54,7 @@ enum macro_keycodes {
 #define KC_LVAD  RGB_VAD
 #define KC_LMOD  RGB_MOD
 #define KC_CTLTB CTL_T(KC_TAB)
+#define KC_CTESC CTL_T(KC_ESC)
 #define KC_GUIEI GUI_T(KC_LANG2)
 #define KC_ALTKN ALT_T(KC_LANG1)
 #define KC_ESC_ALT MT(MOD_LALT, KC_ESC)
@@ -61,22 +62,22 @@ enum macro_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT_kc( \
-ESC,   Q,     W,       E,     R,     T,     Y,     U,     I,     O,     P,     DEL,   \
-CTLTB, A,     S,       D,     F,     G,     H,     J,     K,     L,     SCLN,  ENTER, \
+TAB,   Q,     W,       E,     R,     T,     Y,     U,     I,     O,     P,     XXXXX, \
+CTESC, A,     S,       D,     F,     G,     H,     J,     K,     L,     SCLN,  ENTER, \
 LSFT,  Z,     X,       C,     V,     B,     N,     M,     COMM,  DOT,   SLSH,  RSFT,  \
 LALT,  LOWER, BSPC,    SPC,   RAISE, LGUI \
 ),
 
  [_LOWER] LAYOUT_kc( \
-ESC,   F1,    F2,      F3,    F4,    F5,    HOME,  PGDN,  PGUP,  END,   INS,   DEL,  \
-CTLTB, F6,    F7,      F8,    F9,    F10,   LEFT,  DOWN,  UP,    RIGHT, XXXXX, PSCR, \
+TAB,   F1,    F2,      F3,    F4,    F5,    HOME,  PGDN,  PGUP,  END,   INS,   DEL,  \
+CTESC, F6,    F7,      F8,    F9,    F10,   LEFT,  DOWN,  UP,    RIGHT, XXXXX, PSCR, \
 LSFT,  F11,   F12,     F13,   F14,   F15,   MRWD,  _VOLDOWN,  _VOLUP,  MFFD,  _MUTE,  MPLY,  \
 LALT,  LOWER, BSPC,    SPC,   RAISE, LGUI \
 ),
 
  [_RAISE] LAYOUT_kc( \
-ESC,   CIRC,  TILDE,   LBRC, RBRC,  AMPR, PLUS,  7, 8, 9, DQUO,  PIPE, \
-CTLTB, EXLM,  AT,      LPRN, RPRN,  PERC, MINUS, 4, 5, 6, QUOT,  BSLS, \
+TAB,   CIRC,  TILDE,   LBRC, RBRC,  AMPR, PLUS,  7, 8, 9, DQUO,  PIPE, \
+CTESC, EXLM,  AT,      LPRN, RPRN,  PERC, MINUS, 4, 5, 6, QUOT,  BSLS, \
 LSFT,  HASH,  DLR,     LCBR, RCBR,  ASTR, EQL,   1, 2, 3, GRAVE, UNDS, \
 LALT,  LOWER, BSPC,    SPC,  RAISE, 0 \
 ),
