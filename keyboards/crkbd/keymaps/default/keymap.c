@@ -62,22 +62,22 @@ enum macro_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT_kc( \
-TAB,   Q,     W,       E,     R,     T,     Y,     U,     I,     O,     P,     XXXXX, \
-CTESC, A,     S,       D,     F,     G,     H,     J,     K,     L,     SCLN,  ENTER, \
+TAB,   Q,     W,       E,     R,     T,     Y,     U,     I,     O,     P,     RALT, \
+ESC,   A,     S,       D,     F,     G,     H,     J,     K,     L,     SCLN,  ENTER, \
 LSFT,  Z,     X,       C,     V,     B,     N,     M,     COMM,  DOT,   SLSH,  RSFT,  \
-LGUI,  LOWER, BSPC,    SPC,   RAISE, LALT \
+LGUI,  LOWER, BSPC,    SPC,   RAISE, RCTRL \
 ),
 
  [_LOWER] LAYOUT_kc( \
-TAB,   F1,    F2,      F3,    F4,    F5,    HOME,  PGDN,  PGUP,  END,   INS,   DEL,  \
-CTESC, F6,    F7,      F8,    F9,    F10,   LEFT,  DOWN,  UP,    RIGHT, XXXXX, PSCR, \
-LSFT,  F11,   F12,     F13,   F14,   F15,   MRWD,  _VOLDOWN,  _VOLUP,  MFFD,  _MUTE,  MPLY,  \
-LGUI,  LOWER, BSPC,    SPC,   RAISE, LALT \
+TAB,   F1,    F2,      F3,    F4,    F5,    HOME,  PGDN,     PGUP,   END,   INS,   RALT,  \
+ESC,   F6,    F7,      F8,    F9,    F10,   LEFT,  DOWN,     UP,     RIGHT, XXXXX, PSCR, \
+LSFT,  F11,   F12,     F13,   F14,   F15,   MRWD,  _VOLDOWN, _VOLUP, MFFD,  _MUTE, MPLY,  \
+LGUI,  LOWER, DEL,     SPC,   RAISE, RCTRL \
 ),
 
  [_RAISE] LAYOUT_kc( \
 TAB,   CIRC,  TILDE,   LBRC, RBRC,  AMPR, PLUS,  7, 8, 9, DQUO,  PIPE, \
-CTESC, EXLM,  AT,      LPRN, RPRN,  PERC, MINUS, 4, 5, 6, QUOT,  BSLS, \
+ESC,   EXLM,  AT,      LPRN, RPRN,  PERC, MINUS, 4, 5, 6, QUOT,  BSLS, \
 LSFT,  HASH,  DLR,     LCBR, RCBR,  ASTR, EQL,   1, 2, 3, GRAVE, UNDS, \
 LGUI,  LOWER, BSPC,    SPC,  RAISE, 0 \
 ),
@@ -86,7 +86,7 @@ LGUI,  LOWER, BSPC,    SPC,  RAISE, 0 \
 RST,   LRST,  XXXXX,   XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, \
 LTOG,  LHUI,  LSAI,    LVAI,  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, \
 LMOD,  LHUD,  LSAD,    LVAD,  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, \
-LGUI,  LOWER, BSPC,    SPC,   RAISE, LALT \
+LGUI,  LOWER, BSPC,    SPC,   RAISE, RCTRL \
  )
 };
 
