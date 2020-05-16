@@ -62,31 +62,31 @@ enum macro_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT_kc( \
-TAB,   Q,     W,       E,     R,     T,     Y,     U,     I,     O,     P,     RALT, \
+TAB,   Q,     W,       E,     R,     T,     Y,     U,     I,     O,     P,     LOWER, \
 ESC,   A,     S,       D,     F,     G,     H,     J,     K,     L,     SCLN,  ENTER, \
 LSFT,  Z,     X,       C,     V,     B,     N,     M,     COMM,  DOT,   SLSH,  RSFT,  \
-LGUI,  LOWER, BSPC,    SPC,   RAISE, RCTRL \
+LGUI,  LALT,  BSPC,    SPC,   RAISE, RALT \
 ),
 
  [_LOWER] LAYOUT_kc( \
-TAB,   F1,    F2,      F3,    F4,    F5,    HOME,  PGDN,     PGUP,   END,   INS,   RALT,  \
+TAB,   F1,    F2,      F3,    F4,    F5,    HOME,  PGDN,     PGUP,   END,   INS,   LOWER, \
 ESC,   F6,    F7,      F8,    F9,    F10,   LEFT,  DOWN,     UP,     RIGHT, XXXXX, PSCR, \
 LSFT,  F11,   F12,     F13,   F14,   F15,   MRWD,  _VOLDOWN, _VOLUP, MFFD,  _MUTE, MPLY,  \
-LGUI,  LOWER, DEL,     SPC,   RAISE, RCTRL \
+LGUI,  LALT,  DEL,     SPC,   RAISE, RALT \
 ),
 
  [_RAISE] LAYOUT_kc( \
 TAB,   CIRC,  TILDE,   LBRC, RBRC,  AMPR, PLUS,  7, 8, 9, DQUO,  PIPE, \
 ESC,   EXLM,  AT,      LPRN, RPRN,  PERC, MINUS, 4, 5, 6, QUOT,  BSLS, \
 LSFT,  HASH,  DLR,     LCBR, RCBR,  ASTR, EQL,   1, 2, 3, GRAVE, UNDS, \
-LGUI,  LOWER, BSPC,    SPC,  RAISE, 0 \
+LGUI,  LALT,  BSPC,    SPC,  RAISE, 0 \
 ),
 
  [_ADJUST] LAYOUT_kc( \
 RST,   LRST,  XXXXX,   XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, \
 LTOG,  LHUI,  LSAI,    LVAI,  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, \
 LMOD,  LHUD,  LSAD,    LVAD,  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, \
-LGUI,  LOWER, BSPC,    SPC,   RAISE, RCTRL \
+LGUI,  LALT,  BSPC,    SPC,   RAISE, RALT \
  )
 };
 
@@ -180,13 +180,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       return false;
       break;
     case LOWER:
-      if (record->event.pressed) {
+      if (biton32(layer_state) != _LOWER) {
         layer_on(_LOWER);
-        update_tri_layer_RGB(_LOWER, _RAISE, _ADJUST);
       } else {
         layer_off(_LOWER);
-        update_tri_layer_RGB(_LOWER, _RAISE, _ADJUST);
       }
+      update_tri_layer_RGB(_LOWER, _RAISE, _ADJUST);
+      // if (record->event.pressed) {
+      //   layer_on(_LOWER);
+      //   update_tri_layer_RGB(_LOWER, _RAISE, _ADJUST);
+      // } else {
+      //   layer_off(_LOWER);
+      //   update_tri_layer_RGB(_LOWER, _RAISE, _ADJUST);
+      // }
       return false;
       break;
     case RAISE:
